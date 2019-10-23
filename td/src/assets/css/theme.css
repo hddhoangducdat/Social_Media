@@ -1,0 +1,59 @@
+.background {
+  background-image: url("../img/bg2.jpg");
+  background-size: 100%;
+}
+
+.element {
+  position: fixed;
+  margin-top: 80px;
+  margin-left: 100px;
+  z-index: 999;
+}
+
+.rightdrawer {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.scroll {
+  position: relative;
+  z-index: 99;
+}
+
+.post {
+  justify-content: flex-end;
+}
+
+.parent.child {
+  justify-content: flex-end;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.chat {
+  padding-left: 21rem;
+  margin-left: 21rem;
+}
+
+.status {
+  padding-right: 50rem;
+  margin-right: 50rem;
+  border-right: 50rem;
+}
+
+.title {
+  padding-right: 100rem;
+  margin-right: 100rem;
+}
+
+html {
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
+}
