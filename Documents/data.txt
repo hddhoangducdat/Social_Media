@@ -1,0 +1,151 @@
+{
+  "Users": [
+    {
+      "username": "Hoàng Đức Đạt",
+      "email": "hddhoangducdat@gmail.com",
+      "sex": "male",
+      "password": "83400319a",
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "id": 1
+    },
+    {
+      "username": "Nguyễn Trọng Bình",
+      "email": "BoomNguyen@gmail.com",
+      "password": "12345",
+      "sex": "female",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png",
+      "id": 2
+    },
+    {
+      "password": "phantho",
+      "username": "Bùi Phan Thọ",
+      "email": "PhanTho@gmail.com",
+      "sex": "male",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png",
+      "id": 3
+    }
+  ],
+  "Status": [
+    {
+      "username": "Hoàng Đức Đạt",
+      "userId": 1,
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "url": "",
+      "text": "TD remake\nhaha",
+      "date": "21-10-2019, 15:30",
+      "id": 1
+    },
+    {
+      "username": "Hoàng Đức Đạt",
+      "userId": 1,
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "url": "https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQk44BhdG31S8qlWImKizJ8RQahbmh6i8DYVIbwodFh_0F0mLltsBauCHRtJcXY97jU&_nc_ht=scontent.fsgn3-1.fna&oh=687727fae3c47940043e79cc2eecf335&oe=5E19E9CC",
+      "text": "Hahaha ",
+      "date": "21-10-2019, 15:47",
+      "id": 2
+    },
+    {
+      "username": "Hoàng Đức Đạt",
+      "userId": 1,
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "url": "",
+      "text": "what are you doing",
+      "date": "21-10-2019, 20:46",
+      "id": 3
+    },
+    {
+      "username": "Hoàng Đức Đạt",
+      "userId": 1,
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "url": "",
+      "text": "Hoang2 D8csdfsdhfsdhfsdifh",
+      "date": "22-10-2019, 8:44",
+      "id": 4
+    },
+    {
+      "username": "Hoàng Đức Đạt",
+      "userId": 1,
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "url": "https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQk44BhdG31S8qlWImKizJ8RQahbmh6i8DYVIbwodFh_0F0mLltsBauCHRtJcXY97jU&_nc_ht=scontent.fsgn3-1.fna&oh=687727fae3c47940043e79cc2eecf335&oe=5E19E9CC",
+      "text": "",
+      "date": "22-10-2019, 8:56",
+      "id": 5
+    },
+    {
+      "username": "Nguyễn Trọng Bình",
+      "userId": 2,
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png",
+      "url": "",
+      "text": "haha tao là trai\n",
+      "date": "22-10-2019, 22:48",
+      "id": 6
+    }
+  ],
+  "Notifications": [],
+  "Friends": [
+    {
+      "userId1": 1,
+      "userId2": 2,
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png",
+      "name": "Nguyễn Trọng Bình",
+      "id": 1
+    },
+    {
+      "userId1": 2,
+      "userId2": 1,
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "name": "Hoàng Đức Đạt",
+      "id": 2
+    },
+    {
+      "userId1": 1,
+      "userId2": 3,
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png",
+      "name": "Bùi Phan Thọ",
+      "id": 3
+    },
+    {
+      "userId1": 3,
+      "userId2": 1,
+      "avatar": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "name": "Hoàng Đức Đạt",
+      "id": 4
+    }
+  ],
+  "Images": [
+    {
+      "url": "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQlaDFK7On4NFFdyQMaXzosgcFpjGEU5SZHm0o9zIgzWv-AerA5h0MjQBQ-SxTn6M48&_nc_ht=scontent.fhan5-5.fna&oh=8f188dd84847a7e8767631766bea686e&oe=5E19E9CC",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "url": "https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.0-9/54799897_104992787344972_2706694677771321344_n.jpg?_nc_cat=107&_nc_eui2=AeG158rGtwrINiNi0SxOEWmO7Kyu5P5OjRpmjMAC3HijjtS1QUI8oeRxticPC4j59ltTe51KURC3yk9hUGc7Nmon4XAPIdhf-iia_jNNveEVRw&_nc_oc=AQk44BhdG31S8qlWImKizJ8RQahbmh6i8DYVIbwodFh_0F0mLltsBauCHRtJcXY97jU&_nc_ht=scontent.fsgn3-1.fna&oh=687727fae3c47940043e79cc2eecf335&oe=5E19E9CC",
+      "userId": 1,
+      "id": 2
+    }
+  ],
+  "Videos": [],
+  "Likes": [
+    {
+      "statusId": 1,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "statusId": 6,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "statusId": 6,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "statusId": 2,
+      "userId": 2,
+      "id": 4
+    }
+  ],
+  "Add": []
+}

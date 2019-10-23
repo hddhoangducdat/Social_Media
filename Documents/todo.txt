@@ -1,0 +1,6 @@
+Ask Back-end Dev:
+1. How create url for your own file that port into webs 
+2. Database structure 
+3. Apis detail (How many, What for)
+3. what object you get after request an Apis 
+4. What should i parse in if i want to save data , post on server , What object should it need , how it operate is Optional
