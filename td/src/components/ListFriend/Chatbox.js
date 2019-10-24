@@ -11,28 +11,42 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 
 import Container from "./Container";
+import { connect } from "react-redux";
+import { postChat } from "../../actions/Chat/Chat";
+import DropZone from "../DropZone/DropZone";
 
 // import Button from "@material-ui/core/Button";
 
 // import { Button } from "@material-ui/core";
 import "../../assets/css/theme.css";
 
-export default function RecipeReviewCard() {
+const RecipeReviewCard = ({ friend, postChat, avatar }) => {
   // const classes = useStyles();
   // const [expanded, setExpanded] = React.useState(false);
+  const [url, setUrl] = React.useState("");
 
-  // const handleExpandClick = () => {
-  //   setExpanded(!expanded);
-  //   // console.log(expanded);
-  // };
+  const handleExpandClick = () => {};
 
-  // const [values, setValues] = React.useState({
-  //   multiline: ""
-  // });
+  const [values, setValues] = React.useState("");
 
-  // const handleChange = name => event => {
-  //   setValues({ ...values, [name]: event.target.value });
-  // };
+  const handleChange = event => {
+    setValues(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    if (url !== "" || values !== "") {
+      postChat({
+        text: values,
+        sender: friend.userId1,
+        receiver: friend.userId2,
+        avatar,
+        name: friend.name,
+        url
+      });
+    }
+    setValues("");
+    setUrl("");
+  };
 
   return (
     <Card
@@ -42,7 +56,7 @@ export default function RecipeReviewCard() {
         title={
           <div>
             <Grid container spacing={0}>
-              <Container />
+              <Container friend={friend} />
             </Grid>
           </div>
         }
@@ -55,25 +69,34 @@ export default function RecipeReviewCard() {
               id="standard-multiline-flexible"
               multiline
               rowsMax="4"
-              // value={values.multiline}
-              // onChange={handleChange("multiline")}
+              value={values}
+              onChange={handleChange}
               // className={classes.tex tField}
               // margin="1"
               placeholder="What's on your mind ?"
               fullWidth
             />
+            {url !== "" ? (
+              <div>
+                <br />
+                <img className="ui fluid image small" src={url}></img>
+              </div>
+            ) : (
+              ""
+            )}
           </Grid>
           <Grid item xs={1}>
-            <IconButton
-              aria-label="share"
-              //  onClick={handleExpandClick}
-            >
-              <Picture />
+            <IconButton aria-label="share">
+              <DropZone
+                input={<i class="images outline icon"></i>}
+                setUrl={setUrl}
+              />
             </IconButton>
           </Grid>
           <Grid item xs={1}>
             <IconButton
               aria-label="share"
+              onClick={handleSubmit}
               //  onClick={handleExpandClick}
             >
               <Submit />
@@ -81,7 +104,13 @@ export default function RecipeReviewCard() {
           </Grid>
         </Grid>
       </CardContent>
+
       <Divider />
     </Card>
   );
-}
+};
+
+export default connect(
+  null,
+  { postChat }
+)(RecipeReviewCard);

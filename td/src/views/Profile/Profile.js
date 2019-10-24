@@ -76,7 +76,7 @@ const Profile = ({
     getImageByUserId(uId);
     // console.log("profile");
     // console.log(user);
-  }, [image.length]);
+  }, [image.length, getImageByUserId, getUserById]);
 
   // const handleAddFriend = () => {
   //   AddFriend(currentId, userId);

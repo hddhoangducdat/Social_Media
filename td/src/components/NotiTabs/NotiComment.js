@@ -1,27 +1,28 @@
 import React from "react"; // {useEffect }
 
 import { connect } from "react-redux";
-import { getNotiLike } from "../../actions/Notification/NotiLike";
+import { getNotiComment } from "../../actions/Notification/NotiComment";
 
 import DialogNoti from "../Status/DialogNoti";
 
-const FriendLike = ({ notiLike, userId, getNotiLike, status, user }) => {
+const FriendLike = ({ notiComment, userId, getNotiComment, status, user }) => {
   React.useEffect(() => {
-    getNotiLike(userId);
-  }, [notiLike.length, getNotiLike, userId]);
+    getNotiComment(userId);
+  }, [notiComment.length, getNotiComment, userId]);
 
   const handleLike = () => {
     return (
       <div>
         {status.map((feed, key) => {
-          const noti = notiLike.filter(like => {
-            return like.statusId === feed.id;
+          const noti = notiComment.filter(comment => {
+            return comment.statusId === feed.id;
           });
+
           if (noti.length === 0) return <div key={key}></div>;
           const text =
             noti.length > 1
               ? `${noti[noti.length - 1].text} and ${noti.length -
-                  1} others like your status`
+                  1} others comment on your status`
               : noti[0].text;
           const isLike = noti
             .map(n => {
@@ -53,7 +54,7 @@ const FriendLike = ({ notiLike, userId, getNotiLike, status, user }) => {
 const mapStateToProps = state => {
   // const status = Object.values(state.status)
   return {
-    notiLike: Object.values(state.notiLike),
+    notiComment: Object.values(state.notiComment),
     userId: state.user.id,
     user: state.user,
     status: Object.values(state.status)
@@ -62,9 +63,9 @@ const mapStateToProps = state => {
 
 export default connect(
   // mapStateToProps,
-  // { getNotiLike, ClickLike, UnClickLike, createNotiLike, deleteNotiLike }
+  // { getNotiComment, ClickLike, UnClickLike, createNotiLike, deleteNotiLike }
   mapStateToProps,
   {
-    getNotiLike
+    getNotiComment
   }
 )(FriendLike);

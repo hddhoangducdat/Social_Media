@@ -13,20 +13,20 @@ const CustomizedMenus = ({ search }) => {
     <div>
       {search.map((user, key) => {
         return (
-          <NavLink to={`/Profile/${user.id}`} key={key}>
-            <ListItem
-              button
-              // onClick={() => {
-              //   history.push(`/Profile/${user.id}`);
-              // }}
-              key={key}
-            >
-              <ListItemIcon>
-                <Avatar alt="Remy Sharp" src={user.avatar} />
-              </ListItemIcon>
-              <ListItemText primary={user.username} />
-            </ListItem>
-          </NavLink>
+          // <NavLink to={`/Profile/${user.id}`} key={key}>
+          <ListItem
+            button
+            onClick={() => {
+              history.push(`/Profile/${user.id}`);
+            }}
+            key={key}
+          >
+            <ListItemIcon>
+              <Avatar alt="Remy Sharp" src={user.avatar} />
+            </ListItemIcon>
+            <ListItemText primary={user.username} />
+          </ListItem>
+          // </NavLink>
         );
       })}
     </div>

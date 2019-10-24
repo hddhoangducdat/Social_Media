@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import { reducer as formReducer } from "redux-form";
 //Core redux state components
+import comment from "./components/comment/comment";
 import user from "./components/user/user";
-// import Image from "./components/Image";
 import status from "./components/status/status";
 import search from "./components/search/search";
 import getUser from "./components/getUser/getUser";
@@ -12,16 +12,15 @@ import notiLike from "./components/notification/notilike";
 import friends from "./components/friends/friends";
 import like from "./components/like/like";
 import add from "./components/add/add";
-// import GetStatus from "./components/GetStatus";
-// import GetLikeNoti from "./components/GetLikeNoti";
 import getImage from "./components/getImage/getImage";
+import notiComment from "./components/notification/noticomment";
+import chat from "./components/chat/chat";
 
 export default combineReducers({
   form: formReducer,
   user,
   status,
-  // Image,
-  // Status,
+  comment,
   search,
   getUser,
   getImage,
@@ -30,8 +29,7 @@ export default combineReducers({
   friends,
   like,
   notiLike,
-  add
-  // GetStatus,
-  // GetLikeNoti,
-  // GetImage
+  add,
+  notiComment,
+  chat
 });

@@ -21,17 +21,17 @@ import { getFriendByUserId } from "../../actions/Friends/Friends";
 //   }
 // }));
 
-const AlignItemsList = ({ id, friends, getFriendByUserId }) => {
+const AlignItemsList = ({ id, friends, getFriendByUserId, avatar }) => {
   React.useEffect(() => {
     // console.log("haha");
     getFriendByUserId(id);
-  }, [friends.length]);
+  }, [friends.length, getFriendByUserId, id]);
 
   return (
     <div>
       <div>
         {friends.map((f, key) => {
-          return <Friends key={key} friend={f} />;
+          return <Friends key={key} friend={f} avatar={avatar} />;
         })}
       </div>
     </div>
@@ -39,7 +39,11 @@ const AlignItemsList = ({ id, friends, getFriendByUserId }) => {
 };
 
 const mapStateToProps = state => {
-  return { id: state.user.id, friends: Object.values(state.friends) };
+  return {
+    id: state.user.id,
+    friends: Object.values(state.friends),
+    avatar: state.user.avatar
+  };
 };
 
 export default connect(

@@ -43,27 +43,12 @@ export default function SnackbarContent(props) {
     ];
   }
   return (
-    <Grid container spacing={0}>
+    <Grid container spacing={0} alignItems="center" justify="center">
       <Grid item xs={2}>
         <Avatar src={avatar} />
       </Grid>
       <Grid item xs={10}>
-        <Snack
-          message={
-            <div>
-              {icon !== undefined ? (
-                <props.icon className={classes.icon} />
-              ) : null}
-              <span className={messageClasses}>{message}</span>
-            </div>
-          }
-          classes={{
-            root: classes.root + " " + classes[color],
-            message: classes.message,
-            action: classNames({ [classes.actionRTL]: rtlActive })
-          }}
-          action={action}
-        />
+        <button className="fluid ui button">{message}</button>
       </Grid>
     </Grid>
   );

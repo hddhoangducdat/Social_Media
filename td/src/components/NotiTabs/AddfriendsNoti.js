@@ -19,7 +19,7 @@ const AddFriendsNoti = ({
   React.useEffect(() => {
     getAdd(id);
     getAccept(id);
-  }, [notiAdd.length, notiAccept.length]);
+  }, [notiAdd.length, notiAccept.length, getAccept, getAdd, id]);
   const handleAdd = () => {
     return (
       <div>

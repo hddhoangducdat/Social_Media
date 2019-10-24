@@ -14,6 +14,7 @@ import AddFriends from "@material-ui/icons/PersonAdd";
 
 import AddFriendsNoti from "./AddfriendsNoti";
 import NotiLike from "./NotiLike";
+import NotiComment from "./NotiComment";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -95,7 +96,7 @@ export default function FullWidthTabs() {
           <AddFriendsNoti />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+          <NotiComment />
         </TabPanel>
       </SwipeableViews>
     </div>

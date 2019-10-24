@@ -2,15 +2,12 @@ import _ from "lodash";
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case "GET_IMAGES":
+    case "GET_CHAT":
       return { ...state, ..._.mapKeys(action.payload, "id") };
-    case "CREATE_IMAGE":
-      return action.payload;
-    case "UPLOAD_IMAGE":
+    case "POST_CHAT":
       return { ...state, [action.payload.id]: action.payload };
     case "ERASE_ALL":
       return {};
-
     default:
       return state;
   }

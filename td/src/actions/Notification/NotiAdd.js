@@ -21,9 +21,7 @@ export const EraseNotiAdd = (sender, receiver) => async dispatch => {
     `/Notifications?receiver=${receiver}&sender=${sender}&type=primary`
   );
   if (response.data.length !== 0) {
-    const responseNoti = await Apis.delete(
-      `/Notifications/${response.data[0].id}`
-    );
+    await Apis.delete(`/Notifications/${response.data[0].id}`);
     dispatch({ type: "ERASE_NOTI_ADD", payload: response.data[0].id });
   }
 };

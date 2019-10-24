@@ -22,18 +22,19 @@ import "../../assets/css/theme.css";
 // import { getInfoHome } from "../../actions";
 import { getStatus } from "../../actions/Status/Status";
 import { getLike } from "../../actions/Like/Like";
+import { getComment } from "../../actions/Comment/Comment";
 
 // const useStyles = makeStyles(styles);
 
 const HomePage = ({
   status,
-
+  comment,
   getStatus,
   getLike,
   userId,
-  check,
   friends,
-  like
+  like,
+  getComment
 }) => {
   // const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   // const Feed = () => {
@@ -50,8 +51,17 @@ const HomePage = ({
     });
     status.forEach(s => {
       getLike(s.id);
+      getComment(s.id);
     });
-  }, [status.length, friends.length, like.length]);
+  }, [
+    status.length,
+    friends.length,
+    like.length,
+    getLike,
+    userId,
+    getStatus,
+    comment.length
+  ]);
 
   return (
     <div>
@@ -72,17 +82,24 @@ const HomePage = ({
                     const likestatus = like.filter(l => {
                       return l.statusId === feed.id;
                     });
+                    const commentStatus = comment
+                      .filter(c => {
+                        return c.statusId === feed.id;
+                      })
+                      .reverse();
                     const isLike = likestatus
                       .map(l => {
                         return l.userId === userId;
                       })
                       .includes(true);
+                    // console.log(commentStatus);
                     return (
                       <Grid item xs={9} key={key}>
                         <Status
                           numLike={likestatus.length}
                           isLike={isLike}
                           feed={feed}
+                          comment={commentStatus}
                         />
                       </Grid>
                     );
@@ -107,11 +124,12 @@ const mapStateToProps = state => {
     // Like: Object.values(state.Like),
     userId: state.user.id,
     friends: Object.values(state.friends),
-    like: Object.values(state.like)
+    like: Object.values(state.like),
+    comment: Object.values(state.comment)
   };
 };
 
 export default connect(
   mapStateToProps,
-  { getStatus, getLike }
+  { getStatus, getLike, getComment }
 )(HomePage);
