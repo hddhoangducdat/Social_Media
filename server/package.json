@@ -1,15 +1,20 @@
 {
-  "name": "server",
+  "name": "social_network",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "json-server -p 3001 -w db.json"
+    "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Eric Arita",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.15.1"
+    "@hapi/joi": "^16.1.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.6",
+    "nodemon": "^1.19.4"
   }
 }
