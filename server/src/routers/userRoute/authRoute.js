@@ -1,7 +1,8 @@
 const express = require('express');
-const userModel = require('../models/userModel');
 const bcrypt = require('bcryptjs');
-const { registerValidation, loginValidation } = require('../middlewares/authValidationMiddleware');
+const jwt = require('jsonwebtoken');
+const userModel = require('../../models/userModel');
+const { registerValidation, loginValidation } = require('../../middlewares/authValidation');
 const authRoute = express.Router();
 
 authRoute.post('/register', async (req, res) => {
@@ -51,6 +52,9 @@ authRoute.post('/login', async (req, res) => {
 
     if (!validPassword)
         return res.status(400).send("Password invalid ! Please try again");
+
+    const token = jwt.sign({_id: user.id}, process.env.SECRET_TOKEN);
+    res.header('auth-token', token);
 
     res.send(' Login sucessfully ! ');
 });
