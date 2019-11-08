@@ -2,28 +2,26 @@ import Apis from "../../apis/apis";
 import history from "../../history";
 
 export const register = formValues => async dispatch => {
-  await Apis.post("/Users", {
-    ...formValues,
-    avatar:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png"
+  // console.log(formValues);
+  await Apis.post("/api/authentication/user/register", {
+    ...formValues
+    // avatar:
+    //   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png"
   });
+  // console.log(2);
   history.push("/");
 };
 
 export const logIn = formValues => async dispatch => {
-  const response = await Apis.get("/Users");
-  const checkAccount = response.data.filter(value => {
-    return (
-      (value.email === formValues.email ||
-        value.username === formValues.email) &&
-      value.password === formValues.password
-    );
+  console.log(formValues);
+  const response = await Apis.post("/api/authentication/user/login", {
+    ...formValues,
+    userName: "theprogamevn"
   });
-  if (checkAccount.length === 0) {
-    dispatch({ type: "ERROR", payload: false });
-  } else {
-    dispatch({ type: "LOGIN", payload: checkAccount[0] });
-    history.push(`/home/${checkAccount[0].id}`);
+  console.log(response.data);
+  if (response.data.result === "Login success!") {
+    dispatch({ type: "LOGIN", payload: response.data.value });
+    history.push(`/home/${response.data.value._id}`);
   }
 };
 

@@ -19,21 +19,21 @@ class MaterialUiForm extends React.Component {
     }
   }
 
-  radioButton = ({ input, ...rest }) => (
-    <FormControl>
-      <RadioGroup {...input} {...rest}>
-        <Grid
-          container
-          direction="row"
-          justify="flex-end"
-          alignItems="baseline"
-        >
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-        </Grid>
-      </RadioGroup>
-    </FormControl>
-  );
+  // radioButton = ({ input, ...rest }) => (
+  //   <FormControl>
+  //     <RadioGroup {...input} {...rest}>
+  //       <Grid
+  //         container
+  //         direction="row"
+  //         justify="flex-end"
+  //         alignItems="baseline"
+  //       >
+  //         <FormControlLabel value="female" control={<Radio />} label="Female" />
+  //         <FormControlLabel value="male" control={<Radio />} label="Male" />
+  //       </Grid>
+  //     </RadioGroup>
+  //   </FormControl>
+  // );
 
   renderInput = ({ input, label, meta, type }) => {
     //formProps
@@ -48,6 +48,7 @@ class MaterialUiForm extends React.Component {
   };
 
   onSubmit = formValues => {
+    // console.log(formValues);
     this.props.onSubmit(formValues);
   };
 
@@ -58,9 +59,15 @@ class MaterialUiForm extends React.Component {
         className="ui form error"
       >
         <Field
-          name="username"
+          name="fullName"
           component={this.renderInput}
-          label="username"
+          label="Full Name"
+          type="text"
+        />
+        <Field
+          name="userName"
+          component={this.renderInput}
+          label="User Name"
           type="text"
         />
         <Field
@@ -75,11 +82,11 @@ class MaterialUiForm extends React.Component {
           label="password"
           type="password"
         />
-
+        {/* 
         <Field name="sex" component={this.radioButton}>
           <Radio value="male" label="male" />
           <Radio value="female" label="female" />
-        </Field>
+        </Field> */}
         <Grid
           container
           direction="row-reverse"
@@ -97,12 +104,13 @@ class MaterialUiForm extends React.Component {
 const validate = values => {
   const errors = {};
   const requiredFields = [
-    "username",
+    "fullName",
+    "userName",
     "email",
-    "password",
-    "repassword",
-    "gender",
-    "sex"
+    "password"
+    // "repassword"
+    // "gender"
+    // "sex"
   ];
   requiredFields.forEach(field => {
     if (!values[field]) {

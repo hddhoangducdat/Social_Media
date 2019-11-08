@@ -17,6 +17,7 @@ const useStyles = makeStyles(styles);
 
 const RegisterPage = ({ register }) => {
   const submit = values => {
+    console.log(values);
     register(values);
   };
 
