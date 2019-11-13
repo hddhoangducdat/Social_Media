@@ -17,7 +17,7 @@ const useStyles = makeStyles(styles);
 
 const RegisterPage = ({ register }) => {
   const submit = values => {
-    console.log(values);
+    // console.log(values);
     register(values);
   };
 
@@ -57,7 +57,4 @@ const RegisterPage = ({ register }) => {
   );
 };
 
-export default connect(
-  null,
-  { register }
-)(RegisterPage);
+export default connect(null, { register })(RegisterPage);

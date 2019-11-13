@@ -2,26 +2,35 @@ import Apis from "../../apis/apis";
 import history from "../../history";
 
 export const register = formValues => async dispatch => {
-  // console.log(formValues);
-  await Apis.post("/api/authentication/user/register", {
-    ...formValues
-    // avatar:
-    //   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png"
-  });
-  // console.log(2);
-  history.push("/");
+  try {
+    // console.log(formValues);
+
+    await Apis.post("/api/authentication/user/register", {
+      ...formValues
+      // avatar:
+      //   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1200px-Microsoft_Account.svg.png"
+    });
+    console.log("haha");
+    // console.log(2);
+    history.push("/");
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const logIn = formValues => async dispatch => {
-  console.log(formValues);
-  const response = await Apis.post("/api/authentication/user/login", {
-    ...formValues,
-    userName: "theprogamevn"
-  });
-  console.log(response.data);
-  if (response.data.result === "Login success!") {
-    dispatch({ type: "LOGIN", payload: response.data.value });
-    history.push(`/home/${response.data.value._id}`);
+  try {
+    // console.log(formValues);
+    const response = await Apis.post("/api/authentication/user/login", {
+      ...formValues
+    });
+    console.log(response.data);
+    if (response.data.result === "Login sucessfully !") {
+      dispatch({ type: "LOGIN", payload: response.data.value });
+      history.push(`/home/${response.data.value._id}`);
+    }
+  } catch (err) {
+    console.log(err);
   }
 };
 
